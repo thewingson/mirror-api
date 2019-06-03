@@ -18,8 +18,6 @@ public class RestHome {
     private HomeRepository homeRepository;
     @Autowired
     private HomeService homeService;
-    @Autowired
-    private Subscriber subscriber;
 
     @GetMapping(value = "/all")
     public List<Home> getList() {

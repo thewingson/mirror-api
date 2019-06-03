@@ -1,6 +1,5 @@
 package kz.man.mirrorapi.rest;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import kz.man.mirrorapi.domain.Room;
 import kz.man.mirrorapi.pojo.Sensor;
 import kz.man.mirrorapi.publisher.MQTTPublishClient;
@@ -31,10 +30,6 @@ public class RestRoom {
     private RoomRepository roomRepository;
     @Autowired
     private RoomService roomService;
-    @Autowired
-    private MQTTPublisher mqttPublisher;
-    @Autowired
-    private ObjectMapper objectMapper;
 
     @GetMapping(value = "/all")
     public List<Room> getAll() {
