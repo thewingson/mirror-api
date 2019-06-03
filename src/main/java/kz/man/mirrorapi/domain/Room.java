@@ -23,7 +23,7 @@ public class Room {
 
     private int light;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "home_id", foreignKey = @ForeignKey(name = "room_home_fk"))
     private Home home;
 

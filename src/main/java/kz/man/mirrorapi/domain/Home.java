@@ -19,7 +19,7 @@ public class Home {
 
     private String address;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "home_user_fk"))
     private User holder;
 }
